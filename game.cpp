@@ -27,7 +27,7 @@ void Game::run() {
 
 bool Game::processCommand() {
     bool valid = false;
-    while(not valid) {
+    while(!valid) {
         std::cout << "Enter your command: ";
         char command;
         std::cin >> command;

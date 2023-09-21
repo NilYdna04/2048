@@ -4,6 +4,7 @@
 // 
 
 #include "grid.h"
+// #include "tabulate/table.hpp"
 
 Grid::Grid() {
     for(int i = 0; i < 4; i++) {
@@ -33,7 +34,7 @@ bool Grid::shiftLeft() {
         for(int j = 0; j < 4; j++) {
             local = j;
             loop = true;
-            while(not (local <= 0) and loop and not(grid[i][local] == 0)) {
+            while(! (local <= 0) && loop && !(grid[i][local] == 0)) {
                 if(grid[i][local-1] == grid[i][local]) {
                     grid[i][local] = 0;
                     grid[i][local-1] = grid[i][local-1] * 2;
@@ -62,7 +63,7 @@ bool Grid::shiftRight() {
         for(int j = 3; j > -1; j--) {
             local = j;
             loop = true;
-            while(not (local >= 3) and loop and not(grid[i][local] == 0)) {
+            while(! (local >= 3) && loop && !(grid[i][local] == 0)) {
                 if(grid[i][local + 1] == grid[i][local]) {
                     grid[i][local] = 0;
                     grid[i][local+1] = grid[i][local+1] * 2;
@@ -91,7 +92,7 @@ bool Grid::shiftUp() {
         for(int j = 0; j < 4; j++) {
             local = j;
             loop = true;
-            while(not (local <= 0) and loop and not(grid[local][i] == 0)) {
+            while(! (local <= 0) && loop && !(grid[local][i] == 0)) {
                 if(grid[local-1][i] == grid[local][i]) {
                     grid[local][i] = 0;
                     grid[local-1][i] = grid[local-1][i] * 2;
@@ -120,7 +121,7 @@ bool Grid::shiftDown() {
         for(int j = 3; j > -1; j--) {
             local = j;
             loop = true;
-            while(not (local >= 3) and loop and not(grid[local][i] == 0)) {
+            while(! (local >= 3) && loop && !(grid[local][i] == 0)) {
                 if(grid[local + 1][i] == grid[local][i]) {
                     grid[local][i] = 0;
                     grid[local+1][i] = grid[local+1][i] * 2;

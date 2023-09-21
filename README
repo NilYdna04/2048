@@ -1,0 +1,41 @@
+2048
+by Andrew Lin
+
+2048
+    2048 is a simple implimenation of the 2048 game in c++. The game is run
+    in a terminal.
+
+    In order to play the game, navigate to the directory 2048 is located in,
+    and compile the game with the following command:
+
+    make 2048
+
+    If make is not installed on your system, then please install it. Directions
+    for installing make can be found here:
+
+    https://gnuwin32.sourceforge.net/packages/make.htm
+
+    After the program is compilied, it can be run in terminal with the following
+    command to begin the game:
+
+    ./2048
+
+Rules
+    The rules of this 2048 game are the same as a normal implimentation of 2048.
+    The goal is to get the highest score possible by combining numbers column 
+    wise or row wise. Only numbers with the same number can be combined. If
+    no valid moves are available, the game ends. The game also ends of 2048 is
+    achieved.
+
+Commands
+    Once the program is running, use the following commands to play the game.
+    Generally, the WASD keys are used to navigate the game.
+
+    w: shifts all numbers up.
+    a: shifts all numbers to the left.
+    s: shifts all numbers down.
+    d: shifts all numbers right.
+
+    The Enter key must be pressed to submit the command. If a move is considered
+    invalid (no numbers can be moved or the command doesnt exist), 
+    an error will be outputted.
